@@ -8,6 +8,7 @@ import ROUTES from './constants/routeConstants';
 import useToken from './hooks/useToken';
 import Index  from './views/index'
 import Setting from './components/users/settings'
+import Dashboard from './components/users/dashboard'
 
 function App() {
   const { token, setToken, removeToken} = useToken();  // Use the custom hook for token management
@@ -28,6 +29,7 @@ function App() {
         <Route path={ROUTES.PRODUCTS} element={<Product />} />
         <Route path={ROUTES.REGISTER} element={<Register />} />
         <Route path={ROUTES.SETTINGS} element={<Setting />} />
+        <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
       </Routes>
     </Router>
   );
