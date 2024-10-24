@@ -9,6 +9,8 @@ import useToken from './hooks/useToken';
 import Index  from './views/index'
 import Setting from './components/users/settings'
 import Dashboard from './components/users/dashboard'
+import NotFound from './components/auth/notFound'
+import Confirm from './components/auth/confirm';
 
 function App() {
   const { token, setToken, removeToken} = useToken();  // Use the custom hook for token management
@@ -30,6 +32,8 @@ function App() {
         <Route path={ROUTES.REGISTER} element={<Register />} />
         <Route path={ROUTES.SETTINGS} element={<Setting />} />
         <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+        <Route path={ROUTES.NOTFOUND} element={<NotFound />} />
+        <Route path={ROUTES.CONFIRM_REGISTRATION} element={<Confirm />} />
       </Routes>
     </Router>
   );

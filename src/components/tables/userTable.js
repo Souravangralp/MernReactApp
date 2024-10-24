@@ -3,7 +3,7 @@ import React from 'react';
 const UserTable = ({ users }) => {
   return (
     <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
-      <h2 className="mb-4 text-2xl font-semibold leading-tight">Invoices</h2>
+      <h2 className="mb-4 text-2xl font-semibold leading-tight">Users</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full text-xs">
           <colgroup>
