@@ -1,12 +1,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import useToken from '../../hooks/useToken';
+import ROUTES from '../../constants/routeConstants';
 
 const navigation = [
-  { name: 'Dashboard', href: '/login', current: false },
-  { name: 'Users', href: '/users', current: false },
-  { name: 'Products', href: '/product', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Home', href: `${ROUTES.LOGIN}`, current: false },
+  { name: 'Users', href: `${ROUTES.USERS}`, current: false },
+  { name: 'Products', href: `${ROUTES.PRODUCTS}`, current: false },
+  // { name: 'Calendar', href: '#', current: false },
 ];
 
 function classNames(...classes) {
