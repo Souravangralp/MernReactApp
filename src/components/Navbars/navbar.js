@@ -2,6 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import useToken from '../../hooks/useToken';
 import ROUTES from '../../constants/routeConstants';
+import { Link } from 'react-router-dom';
 
 const navigation = [
   { name: 'Home', href: `${ROUTES.LOGIN}`, current: false },
@@ -18,7 +19,6 @@ export default function Navbar() {
   const { token, setToken, saveToken } = useToken();
 
   const handleLogout = () => {
-    saveToken(token);
     setToken(null);
   };
 
@@ -59,14 +59,8 @@ export default function Navbar() {
                 ))}
                 {/* Show Login button if no token */}
                 {!token ? (
-  <button
-    className="text-gray-300 hover:bg-gray-700 hover:text-white"
-    onClick={() => {
-      // Redirect to login or open modal for sign-in
-      console.log("Sign In button clicked");
-    }}
-  >
-    Sign In
+  <button className="text-gray-300 hover:bg-gray-700 hover:text-white">
+    <Link to={ROUTES.LOGIN}>Sign In</Link>
   </button>
 ) : (
   <button

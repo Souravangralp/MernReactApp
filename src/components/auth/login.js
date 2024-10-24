@@ -1,15 +1,18 @@
-import { LoginUser } from '../services/userClientService'; // Adjust the path as needed
-
+import { loginUser } from '../../services/userClientService'; // Adjust the path as needed
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useState } from 'react';
+import ROUTES from '../../constants/routeConstants';
 
 export default function Login({ setToken }) {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('');  
+  const navigate = useNavigate(); // Create navigate function
+
   // const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = await LoginUser(email, password);
+    const data = await loginUser(email, password);
     setToken(data);
     console.log('Login successful:', data.token);
   };
@@ -29,9 +32,6 @@ export default function Login({ setToken }) {
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* {errorMessage && (
-            <div className="text-red-500 text-sm text-center">{errorMessage}</div>
-          )} */}
           <div>
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
               Email address
@@ -87,9 +87,9 @@ export default function Login({ setToken }) {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Not a member?{' '}
-          <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+          <Link to={ROUTES.REGISTER} className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
             Start a 14 day free trial
-          </a>
+          </Link>
         </p>
       </div>
     </div>

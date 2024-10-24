@@ -5,7 +5,7 @@ const headers = {
 };
 
 // Function to log in a user
-export const LoginUser = async (email, password) => {
+export const loginUser = async (email, password) => {
   try {
     const response = await fetch(`${API_BASE_URL}/auth/login`, {
       method: 'POST',
@@ -26,17 +26,17 @@ export const LoginUser = async (email, password) => {
 };
 
 // Function to register a new user
-export const RegisterUser = async (firstName, lastName, email, phone, password) => {
+export const registerUser = async (firstName, lastName, email, phone, password) => {
   try {
     const response = await fetch(`${API_BASE_URL}/auth/register`, {
       method: 'POST',
       headers,
       body: JSON.stringify({
-        FIRSTNAME: firstName,
-        LASTNAME: lastName,
-        EMAIL: email,
-        PHONE: phone,
-        PASSWORD: password,
+        firstname: firstName,
+        lastname: lastName,
+        email: email,
+        phone: phone,
+        password: password,
       }),
     });
 
@@ -52,7 +52,7 @@ export const RegisterUser = async (firstName, lastName, email, phone, password) 
   }
 };
 
-export const GetAll = async (token) => {
+export const getAll = async (token) => {
   const authHeaders = {
     ...headers,
     'Authorization': `Bearer ${token}` // Include the Bearer token in the header
