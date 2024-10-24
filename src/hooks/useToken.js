@@ -1,6 +1,9 @@
 import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export default function useToken() {
+  // const navigate = useNavigate(); // Initialize navigate
+
     const getToken = () => {
       const tokenString = sessionStorage.getItem('token');
       const userToken = JSON.parse(tokenString);
@@ -14,8 +17,15 @@ export default function useToken() {
         setToken(userToken.token);
     };
 
+    const removeToken = () => {
+      sessionStorage.removeItem('token');  // Clear from storage
+      setToken(null);  // Reset the token in state
+      // navigate('/index')
+    };
+
     return {
     setToken: saveToken,
-    token
+    token,
+    removeToken
     }
-  }
+}

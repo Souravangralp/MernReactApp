@@ -3,9 +3,7 @@ import { getAll } from '../services/userClientService'; // Adjust the import pat
 import useToken from '../hooks/useToken'; // Adjust the import path as needed
 import UserTable from '../components/tables/userTable'
 const UserList = () => {
-  console.log('startesd');
-
-  const { token } = useToken(); // Get the token using your hook
+  const {token } = useToken(); // Get the token using your hook
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
 
@@ -16,7 +14,6 @@ const UserList = () => {
         setError('No token found. Please log in.');
         return;
       }
-      
       try {
         const userData = await getAll(token); // Pass the token to GetAll
         setUsers(userData);

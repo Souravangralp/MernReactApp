@@ -3,6 +3,9 @@ const ROUTES = {
     PRODUCTS: '/products',
     USERS: '/users',
     REGISTER: '/register',
+    INDEX: '/',
+    DASHBOARD: '/dashboard',
+    SETTINGS: '/setting'
 };
   
 export default ROUTES;

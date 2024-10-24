@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // import IndexNavbar from "../components/Navbars/navbar";
-import Footer from "../components/Footers/Footer";
+import Footer from "../components/footers/Footer";
 
 export default function Index() {
   return (
@@ -49,11 +49,11 @@ export default function Index() {
           </div>
         </div>
 
-        <img
+        {/* <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
           src={require("../assets/img/pattern_react.png").default}
           alt="..."
-        />
+        /> */}
       </section>
 
       <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
@@ -227,7 +227,7 @@ export default function Index() {
 
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto mt-32">
               <div className="relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0">
-                <img
+                {/* <img
                   alt="..."
                   src={require("../assets/img/component-btn.png").default}
                   className="w-full align-middle rounded absolute shadow-lg max-w-100-px z-3 left-145-px -top-29-px"
@@ -256,7 +256,7 @@ export default function Index() {
                   alt="..."
                   src={require("../assets/img/component-btn-pink.png").default}
                   className="w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -479,7 +479,7 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
-              <img
+              {/* <img
                 alt="..."
                 className="max-w-full rounded-lg shadow-xl"
                 style={{
@@ -487,7 +487,7 @@ export default function Index() {
                     "scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg)",
                 }}
                 src={require("../assets/img/documentation.png").default}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -515,11 +515,11 @@ export default function Index() {
                   </h5>
                   <Link to="/auth/login">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
+                      {/* <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
                         src={require("../assets/img/login.jpg").default}
-                      />
+                      /> */}
                     </div>
                   </Link>
                 </div>
@@ -530,11 +530,11 @@ export default function Index() {
                   </h5>
                   <Link to="/profile">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
+                      {/* <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
                         src={require("../assets/img/profile.jpg").default}
-                      />
+                      /> */}
                     </div>
                   </Link>
                 </div>
@@ -545,11 +545,11 @@ export default function Index() {
                   </h5>
                   <Link to="/landing">
                     <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
-                      <img
+                      {/* <img
                         alt="..."
                         className="align-middle border-none max-w-full h-auto rounded-lg"
                         src={require("../assets/img/landing.jpg").default}
-                      />
+                      /> */}
                     </div>
                   </Link>
                 </div>

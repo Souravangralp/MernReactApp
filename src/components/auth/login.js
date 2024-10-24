@@ -1,19 +1,17 @@
 import { loginUser } from '../../services/userClientService'; // Adjust the path as needed
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate} from 'react-router-dom'; // Import useNavigate
 import { useState } from 'react';
 import ROUTES from '../../constants/routeConstants';
 
 export default function Login({ setToken }) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');  
-  const navigate = useNavigate(); // Create navigate function
-
-  // const [errorMessage, setErrorMessage] = useState('');
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = await loginUser(email, password);
-    setToken(data);
+    await setToken(data);
+    navigate(ROUTES.USERS)
     console.log('Login successful:', data.token);
   };
 
@@ -94,4 +92,4 @@ export default function Login({ setToken }) {
       </div>
     </div>
   );
-  }
+}
